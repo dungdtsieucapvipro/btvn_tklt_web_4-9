@@ -1,0 +1,31 @@
+<!-- Tạo một textarea có tên là NoiDung, một Textbox có
+tên là : SoKyTu.
+Với yêu cầu như sau:
+– Khi người sử dụng gõ các phím vào trong textarea thì số
+lượng ký tự (Độ dài xâu) chứa trong textarea đó sẽ được
+hiển thị trong textbox.
+– Nếu số lượng ký tự trong textarea gõ vào vượt quá 200
+ký tự thì thông báo : "Bạn đã gõ quá số ký tự cho phép !". -->
+<html>
+    <head>
+        <title>bai_4</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script language ="JavaScript">
+            function KiemTra(){
+                if(frm.NoiDung.value.length > 200)
+                    alert("ban go qua so ky tu roi!");
+                frm.SoKyTu.value = frm.NoiDung.value.length;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm">
+            So ky tu da go:
+            <input type="text" size="4" name="SoKyTu" >
+            <br>
+            <textarea name="NoiDung" cols="50" rows="10"  
+            onkeyup="KiemTra();"></textarea>
+                <!--*onkeyup: Kích hoạt khi một phím được thả ra-->
+        </form >
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!--  Tạo 3 textbox, có tên lần lượt là: SoLuong (Số lượng),
+DonGia (Đơn giá) và ThanhTien (Thành tiền);
+Yêu cầu: Khi người dùng nhập giá trị trong DonGia thì kết
+quả sẽ được cập nhật ngay trong ThanhTien.-->
+<html>
+    <head>
+        <title>bai_6</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <form name="frm">
+            <b style="color: black;">Nhap so luong va gia</b>
+            <br>
+            so luong <input type="text"  name="SoLuong" placeholder="1">
+            don gia <input type="text" name="DonGia" placeholder="10 USD"
+            onKeyUp="ThanhTien.value=SoLuong.value*DonGia.value">
+                <!-- !su dung onkeyup co tac dung: kich hoat khi tha phim ra(muon khi ta vua nhap so xong phep thanh tien se duoc tinh va value ThanhTien se duoc truyen vo textbox thanh tien) -->
+            <hr>
+            thanh tien <input type="text" name="ThanhTien" placeholder="10 USD">
+        </form>
+    </body>
+</html>

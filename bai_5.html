@@ -1,0 +1,29 @@
+<!--Tạo một nút có value = "Gửi", textbox có name =
+"HoTen", 2 nút radio có tên là GioiTinh và nhãn tương
+ứng là Nam, nữ.
+Yêu cầu: Khi người dùng di chuyển chuột vào phần tử
+nào thì hiển thị thông báo tương ứng dưới thanh trạng
+thái.
+– Ví dụ nếu người sử dụng di chuyển chuột qua nút nhấn
+"Gửi" thì thanh trạng thái sẽ là "Bạn đang di chuyển
+chuột vào nút"...  -->
+<html>
+    <head>
+        <title>bai_5</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+    <body>
+        <form name="frm">
+            <input type="text" name="Hoten" placeholder="Dien ho ten vao" 
+            onmousemove="window.status='Chuot tron nut textbox';">
+            <br>
+            <input type="radio" name="GioiTinh"
+            onmousemove="window.status='Chuot tron nut Nam';">Nam</option>
+            <input type="radio" name="GioiTinh"
+            onmousemove="window.status='Chuot tron nut Nu';">Nu</option>
+            <br>
+            <input type="button" value="Gui" 
+            onmousemove="window.status='Chuot trong nut Gui';">
+        </form>
+    </body>
+</html>

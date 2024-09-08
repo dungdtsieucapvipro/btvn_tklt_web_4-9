@@ -1,0 +1,21 @@
+<!--Tạo 2 nút, nút thứ nhất có value = "Xanh", nút thứ hai
+có value = "Đỏ".
+Yêu cầu: Khi người dùng click vào nút xanh thì màu
+nền của tài liệu là: xanh (blue), còn khi người dùng
+click vào nút đỏ thì màu nền của tài liệu là: đỏ (red).
+– Hướng dẫn: Thuộc tính màu nền của tài liệu được lưu
+trong thuộc tính bgColor của đối tượng document. Thuộc
+tính này có thể thay đổi được.  -->
+<html>
+    <head><title>bai_2</title></head>
+    <body>
+        <form name="frm">
+            <input type="button" value="xanh"
+            onclick="window.document.bgColor= 'blue'">
+            <br>
+            <input type="button" value="do"
+            onclick="window.document.bgColor= 'red'">
+                            <!-- *bgColor: background-color -->
+        </form>
+    </body>
+</html>

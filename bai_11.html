@@ -1,0 +1,22 @@
+<!-- Xây dựng trang Web thực hiện các phép tính số học cơ bản (cộng, trừ, nhân, chia) -->
+ <html>
+    <head>
+        <title>bai_11</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    </head>
+    <body 
+    onload="a_cong_b(); a_tru_b(); a_nhan_b(); a_chia_b(); a_mu_b()">
+        <script src="bai_11.js"></script>
+        <form name="frm">
+            <input type="number" placeholder="a" name="a">
+            <input type="button" value="+" onclick="a_cong_b(document.frm)">
+            <input type="button" value="-" onclick="a_tru_b(document.frm)">
+            <input type="button" value="x" onclick="a_nhan_b(document.frm)">
+            <input type="button" value="/" onclick="a_chia_b(document.frm)">
+            <input type="button" value="^" onclick="a_mu_b(document.frm)">
+            <input type="number"  placeholder="b" name="b">
+            <input type="text" size="1" value="=">
+            <input type="number" placeholder="c" name="answer">
+        </form>
+    </body>
+ </html>

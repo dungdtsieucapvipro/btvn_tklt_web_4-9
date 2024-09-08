@@ -1,0 +1,20 @@
+<!-- Tạo 2 phần tử: một nút bấm và một ô textbox. Hãy
+viết đoạn mã JavaScript khi người dùng click chuột
+vào nút Welcome thì hiển thị nội dung chứa trong
+textbox.
+– Hướng dẫn: Để lấy giá trị của một phần tử HTML: <Tên
+phần tử>.value
+– Ví dụ: msg.value cho ta giá trị của text tên là msg. -->
+<html>
+    <head>
+        <title>bai_1</title>
+    </head>
+    <body>
+        <form name="frm">
+            <input type="text" name="msg" placeholder="gho text">
+            <input type="button" value="welcome"
+            onclick="alert(document.frm.msg.value)">
+                        <!-- *onclick: click chuot -->
+        </form>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!-- Tạo một danh sách lựa chọn gồm có 4 màu: red, blue,
+brown và lavender.
+ Khi người dùng chọn một màu thì màu nền của tài liệu
+sẽ thay đổi tương ứng. -->
+<html>
+    <head>
+        <title>bai_3</title>
+    </head>
+    <body>
+        <script language = "JavaScript">
+            function DoiMau(){
+                window.document.bgColor=frm.Mau.value
+            }
+        </script>
+        <p style="color: black;"><b>chon cac mau sau day</b></p>
+        
+        <form name="frm">
+            <select name="Mau" onchange="DoiMau()">  
+                            <!-- *onchange: Đối tượng được thay đổi (nhập dữ liệu) -->
+                <option value="red">do</option>
+                <option value="blue">xanh</option>
+                <option value="brown">nau</option>
+                <option value="lavender">oai huong</option>
+            </select>
+        </form>
+    </body>
+</html>
