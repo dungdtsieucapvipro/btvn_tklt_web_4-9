@@ -1,0 +1,28 @@
+<!-- *tham khao: https://www.w3schools.com/jS/tryit.asp?filename=tryjs_timing_clock-->
+ <html>
+    <head>
+        <title>bai_13</title>
+        <script>
+            function startTime(){
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('clock').value = h +":"+ m +":"+ s;
+                setTimeout(startTime, 1000);
+            }
+            function checkTime(i){
+                if (i<10){
+                    i = "0" + i;
+                }
+                return i;
+            }
+        </script>
+    </head>
+    <body onload="startTime()">
+        <h1>Dong ho</h1>
+        <input type="text" name="clock" id="clock">
+    </body>
+ </html>

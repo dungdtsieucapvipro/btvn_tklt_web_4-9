@@ -1,0 +1,33 @@
+<!-- *tham khao: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_toggle_hide_show -->
+<html>
+    <head>
+        <title>bai_9</title>
+        <script>
+            function toggleText(){
+                var x = document.getElementById("myDIV");
+                if (x.style.display == "none") {
+                    x.style.display = "block";
+                }
+                else {
+                    x.style.display = "none";
+                }
+            }
+            function hideText(){
+                var x = document.getElementById("myDIV");
+                x.style.display = "none";  // Ẩn đoạn văn bản
+            }
+            function showText(){
+                var x = document.getElementById("myDIV");
+                x.style.display = "block";  // Hiển thị đoạn văn bản
+            }
+        </script>
+    </head>
+    <body>
+        <div id="myDIV">
+            This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text. This is a text.
+        </div>
+        <button onclick="toggleText()">Toggle Text</button>
+        <button onclick="hideText()">Hide Text</button>
+        <button onclick="showText()">Show Text</button>
+
+    </body>

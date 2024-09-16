@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Orders</title>
+    <script>
+        function docheck(status) {
+            var num = document.frmList.chkid.length;
+            for (var i = 0; i < num; i++) {
+                document.frmList.chkid[i].checked = status;
+            }
+        }
+        function docheckone() {
+            var checked = true;
+            var num = document.frmList.chkid.length;
+            for (var i = 0; i < num; i++) {
+                if (document.frmList.chkid[i].checked == false) {
+                    checked = false;
+                    break;
+                }
+            }
+            document.frmList.chkall.checked = checked;
+        }
+    </script>
+</head>
+<body>
+    <h1>Your Orders</h1>
+    <form name="frmList" action="Process.php" method="post">
+        <table border="1">
+            <tr>
+                <th><input type="checkbox" name="chkall" onclick="docheck(this.checked);"></th>
+                <th>Order No</th>
+                <th>Customer Name</th>
+                <th>Order Date</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chkid" value="SHD11" onclick="docheckone();"></td>
+                <td>SHD11</td>
+                <td>Nguyen Van A</td>
+                <td>12/2/2009</td>
+                <td>20000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="chkid" value="SHD12" onclick="docheckone();"></td>
+                <td>SHD12</td>
+                <td>Nguyen Bich Thao</td>
+                <td>12/11/2009</td>
+                <td>55000</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;"><b>Total:</b></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: right;">
+                    <input type="button" value="Update">
+                    <input type="button" value="Save" style="border-color: aqua;">
+                    <input type="button" value="Back">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+        <br>
+    </form>
+</body>
+</html>

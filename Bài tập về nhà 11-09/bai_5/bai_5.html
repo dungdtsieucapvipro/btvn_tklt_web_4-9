@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>bai_5</title>
+        <link rel="stylesheet" href="">
+        <script language ="JavaScript">
+            bLight = 0; // Biến lưu trạng thái bóng đèn (bật/tắt)
+            function changeImage(){
+                if (bLight == 0){
+                    bLight = 1; // Thay đổi trạng thái đèn thành bật
+                    document.myImage.src ="img/bulbon.jpg";
+                }
+                else {
+                    bLight = 0;// Thay đổi trạng thái đèn thành tắt
+                    document.myImage.src ="img/bulboff.jpg"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <img name="myImage" onclick="changeImage()" src="img/bulboff.jpg" 
+        style="width: 40%;" alt="bong den on/off">
+    </body>
+</html>

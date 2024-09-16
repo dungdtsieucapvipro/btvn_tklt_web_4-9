@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>bai_10</title>
+        <script>
+            function validateEmail(email) {
+                const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+                return emailPattern.test(email);
+            }
+            function validateForm() {
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+                if (email === "") {
+                    alert("Nhap lai dia chi email");
+                    return false;
+                } else if (!validateEmail(email)) {
+                    alert("Email khong hop le");
+                    return false;
+                }
+                if (password === "") {
+                    alert("Nhap lai password");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validateForm()">
+            <label for="email">Email Address</label> <br>
+            <input type="text" name="email" id="email" placeholder="Nhập địa chỉ email">
+            <br>
+            <label for="password">Password</label> <br>
+            <input type="password" name="password" id="password" placeholder="Nhập mật khẩu">
+            <hr>
+            <input type="submit" value="SignIn">
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>

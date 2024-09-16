@@ -1,0 +1,35 @@
+<!-- * tham khao: https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_css_bgcolor -->
+<html>
+    <head>
+        <title>bai_8</title>
+        <script>
+            function bgChange(bg){
+                document.body.style.background =bg;
+            }
+            function resetBackground(){
+                document.body.style.background ='white';
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Mouse over the squares</h1>
+        <table style="width: 300px; height: 100px;">
+            <!-- *Thẻ <tr> xác định phần tử là một hàng trong bảng. -->
+                <!-- *Thẻ <td> xác định phần tử là một ô trong hàng. -->
+            <tr> 
+                <td onmouseover="bgChange(this.style.backgroundColor)"
+                onmouseout="resetBackground()"
+                style="background-color: red;">
+                </td>
+                <td onmouseover="bgChange(this.style.backgroundColor)"
+                onmouseout="resetBackground()"
+                style="background-color: blue;">
+                </td>
+                <td onmouseover="bgChange(this.style.backgroundColor)"
+                onmouseout="resetBackground()"
+                style="background-color: green;">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

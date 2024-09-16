@@ -1,0 +1,22 @@
+<!-- TODO: Văn bản di chuyển  -->
+<html>
+    <head>
+        <title>bai_4</title>
+        <script language ="JavaScript">
+            function moveleft(){
+                document.getElementById('header').style.position = 'absolute';
+                document.getElementById('header').style.left = '0px';
+            }
+            function moveback(){
+                document.getElementById('header').style.left = '100px';
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="header" onmouseover="moveleft()"onmouseout="moveback()">
+            <!-- * onmouseover là một sự kiện (event) trong HTML và JavaScript. Sự kiện này sẽ được kích hoạt khi người dùng di chuột qua một phần tử HTML. 
+             *     onmouseout cũng là một sự kiện trong HTML và JavaScript, xảy ra khi người dùng rời chuột ra khỏi một phần tử HTML. -->
+            Mouse over this text
+        </h1>
+    </body>
+</html>

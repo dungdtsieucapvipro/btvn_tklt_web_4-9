@@ -1,0 +1,31 @@
+<!-- TODO Sự kiện trên checkbox: bai nay muon tao 1 o tich voi nd: "the light switch" khi nguoi tich vao o thi nau nen cua document sang con ko thi se toi  -->
+ <html>
+    <head>
+        <title>bai_2</title>
+        <!-- *Nội dung của hàm:
+        * var check = window.document.frmlight.checklight;: Biến check được gán giá trị của hộp kiểm (checklight). Hàm window.document.frmlight.checklight truy xuất hộp kiểm thông qua tên của biểu mẫu (frmlight) và tên của hộp kiểm (checklight).
+        * if (check.checked): Kiểm tra xem hộp kiểm có đang được chọn (ticked) hay không.
+            * Nếu hộp kiểm được chọn (checked), màu nền của trang web (document.bgColor) sẽ đổi thành màu trắng ('white').
+            * Nếu hộp kiểm không được chọn, màu nền của trang sẽ trở thành màu đen ('black').
+        ? Thuộc tính .checked trong JavaScript được sử dụng để kiểm tra trạng thái của một phần tử checkbox (hộp kiểm) hoặc radio button (nút lựa chọn).
+            ? Nếu checkbox được chọn (ticked), thuộc tính .checked sẽ trả về giá trị true.
+            ? Nếu checkbox không được chọn (unticked), .checked sẽ trả về giá trị false. -->
+        <script language="JavaScript">
+            function switchligh(){
+                var check = window.document.frmlight.checklight;
+                if (check.checked){
+                    document.bgColor = 'white';
+                }
+                else{
+                    document.bgColor = 'black';
+                }
+            }
+        </script>
+    </head>
+    <body bgcolor="white">
+        <form name="frmlight">
+            <input type="checkbox" name="checklight"
+            onclick="switchligh()"> The light switch
+        </form>
+    </body>
+ </html>

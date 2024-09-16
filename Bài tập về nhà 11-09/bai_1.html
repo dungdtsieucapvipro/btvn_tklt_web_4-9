@@ -1,0 +1,35 @@
+<!-- TODO: khi tro chuot vao o text thi thong bao: focus (refesh sau 3s)
+ TODO yeu cau nguoi cung nhap text
+ TODO sau khi nhap text thi hien thong bao la: change  -->
+<html>
+    <head>
+        <title>bai_1</title>
+        <!-- <script language ="JavaScript">
+            function show(content){
+                alert(content);
+            }
+        </script> -->
+        <!-- ! code nay thong bao focus sau do nhan ok thi ko nhap duoc gi cả,cu focus mai -->
+         <!--* === toan tu so sanh nghiêm ngat tra ve true neu 2 gia tri bang nhau & cung kieu du lieu  -->
+         <script>
+            function show(content){
+                if (content === 'focus'){
+                    setTimeout(function show() {
+                        alert(content);
+                    }, 3000); //tri hoan 1 s trc khi thong bao
+                }
+                else if (content === 'change' ){
+                    alert(content);
+                }
+            }
+         </script>
+    </head>
+    <body>
+        <!--* onfocus: Kích hoạt khi cửa sổ nhận trọng tâm ( onfocus được kích hoạt ngay chi người dùng chuyển con trỏ/ Tab di chuyen vào thẻ.) -->
+        <form name="frm">
+            <input type="text" onfocus="show('focus')" placeholder="ghi bat ky" 
+            onchange="show('change');">
+                <!-- *onchange: Đối tượng được thay đổi (nhập dữ liệu) -->
+        </form>
+    </body>
+</html>
